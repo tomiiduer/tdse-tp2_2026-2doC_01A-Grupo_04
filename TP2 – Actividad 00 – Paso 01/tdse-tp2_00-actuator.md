@@ -213,10 +213,12 @@ La función `task_actuator_statechart(uint32_t index)` evalúa y ejecuta la máq
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **1. Repositorio Inicial** | Inicialización del sistema | - | `EV_LED_IDLE` | `false` | Estado estable sin eventos pendientes. |
 | **2. Excitación Externa** | `put_event_task_actuator(EV_LED_ACTIVE, ID_LED_A)` | `0` (`ID_LED_A`) | `EV_LED_ACTIVE` | **`true`** | Evento registrado de encendido, bandera alta notificando nuevo evento. |
-| **3. Procesamiento** | `task_actuator_update()` $ightarrow$ `task_actuator_statechart(0)` | `0` | `EV_LED_ACTIVE` | **`false`** | Evento consumido en la FSM; la bandera vuelve a `false`. |
+| **3. Procesamiento** | `task_actuator_update()` $
+ightarrow$ `task_actuator_statechart(0)` | `0` | `EV_LED_ACTIVE` | **`false`** | Evento consumido en la FSM; la bandera vuelve a `false`. |
 | **4. Reposo Activo** | Loop principal sin eventos | - | `EV_LED_ACTIVE` | `false` | Conserva la última constante de evento pero con `flag = false`. |
 | **5. Excitación Externa** | `put_event_task_actuator(EV_LED_IDLE, ID_LED_A)` | `0` (`ID_LED_A`) | `EV_LED_IDLE` | **`true`** | Evento registrado de apagado, bandera alta notificando nuevo evento. |
-| **6. Procesamiento** | `task_actuator_update()` $ightarrow$ `task_actuator_statechart(0)` | `0` | `EV_LED_IDLE` | **`false`** | Evento consumido en la FSM; la bandera vuelve a `false`. |
+| **6. Procesamiento** | `task_actuator_update()` $
+ightarrow$ `task_actuator_statechart(0)` | `0` | `EV_LED_IDLE` | **`false`** | Evento consumido en la FSM; la bandera vuelve a `false`. |
 
 ---
 
