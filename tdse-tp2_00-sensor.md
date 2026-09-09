@@ -8,7 +8,7 @@ Este documento contiene el análisis detallado y la explicación del funcionamie
 
 ---
 
-## 1. Arquitectura y Estructura del Módulo
+## 1. Arquitectura y Estructura del Módulo 
 
 El sistema implementa un modelo de diseño **no bloqueante orientado a eventos** impulsado por tiempo (*Update by Time Code*, con período típico de $1\text{ ms}$).
 
