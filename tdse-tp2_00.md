@@ -108,3 +108,4 @@ El alumno deberá entregar un archivo comprimido o un repositorio (ej. GitHub) q
 ## 5. Referencias y Bibliografía
 *   Miro Samek (2008). *Practical UML Statecharts in C/C++: Event-Driven Programming for Embedded Systems*. Newnes.
 *   Documentación sobre patrones de diseño en C embebido: "State Pattern in C".
+*   
