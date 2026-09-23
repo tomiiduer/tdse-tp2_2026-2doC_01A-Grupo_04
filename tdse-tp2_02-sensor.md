@@ -1,0 +1,6 @@
+VALORES DE TASK_DTA_LIST[0]
+
+NOE: (adimensional)
+LET:
+BCET:
+WCET: 
